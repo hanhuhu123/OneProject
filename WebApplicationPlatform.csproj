@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF5EDF48-47D0-43E5-88E1-943B60C29671}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplicationPlatform</RootNamespace>
+    <AssemblyName>WebApplicationPlatform</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\dropdown_369a8965.png" />
+    <Content Include="Content\img\simple_s_468f567e.png" />
+    <Content Include="Content\js\areadata.js" />
+    <Content Include="Content\js\auto_area.js" />
+    <Content Include="Content\js\City_data.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="MyData\css\style.css" />
+    <Content Include="MyData\HomePage\css\common.css" />
+    <Content Include="MyData\HomePage\css\style.css" />
+    <Content Include="MyData\HomePage\images\add00.jpg" />
+    <Content Include="MyData\HomePage\images\add01.jpg" />
+    <Content Include="MyData\HomePage\images\add_lbg.jpg" />
+    <Content Include="MyData\HomePage\images\adress_i.jpg" />
+    <Content Include="MyData\HomePage\images\agree_b.jpg" />
+    <Content Include="MyData\HomePage\images\ayxq_img.jpg" />
+    <Content Include="MyData\HomePage\images\bank01.jpg" />
+    <Content Include="MyData\HomePage\images\bank02.jpg" />
+    <Content Include="MyData\HomePage\images\bank03.jpg" />
+    <Content Include="MyData\HomePage\images\bank04.jpg" />
+    <Content Include="MyData\HomePage\images\bank05.jpg" />
+    <Content Include="MyData\HomePage\images\bank06.jpg" />
+    <Content Include="MyData\HomePage\images\bank_zs.jpg" />
+    <Content Include="MyData\HomePage\images\banner01.jpg" />
+    <Content Include="MyData\HomePage\images\baoz.jpg" />
+    <Content Include="MyData\HomePage\images\bg_alpha.png" />
+    <Content Include="MyData\HomePage\images\bg_alpha2.png" />
+    <Content Include="MyData\HomePage\images\big_img.jpg" />
+    <Content Include="MyData\HomePage\images\big_img01.jpg" />
+    <Content Include="MyData\HomePage\images\bimg01.jpg" />
+    <Content Include="MyData\HomePage\images\button_bg.png" />
+    <Content Include="MyData\HomePage\images\button_xz.jpg" />
+    <Content Include="MyData\HomePage\images\buy_button.jpg" />
+    <Content Include="MyData\HomePage\images\buy_l.jpg" />
+    <Content Include="MyData\HomePage\images\b_button.jpg" />
+    <Content Include="MyData\HomePage\images\b_line.jpg" />
+    <Content Include="MyData\HomePage\images\b_logo.jpg" />
+    <Content Include="MyData\HomePage\images\b_row.jpg" />
+    <Content Include="MyData\HomePage\images\car.jpg" />
+    <Content Include="MyData\HomePage\images\close.jpg" />
+    <Content Include="MyData\HomePage\images\cp_img.jpg" />
+    <Content Include="MyData\HomePage\images\cx_icon.jpg" />
+    <Content Include="MyData\HomePage\images\dj_01.jpg" />
+    <Content Include="MyData\HomePage\images\dl_bg.jpg" />
+    <Content Include="MyData\HomePage\images\dota01.jpg" />
+    <Content Include="MyData\HomePage\images\dota1.jpg" />
+    <Content Include="MyData\HomePage\images\fan.jpg" />
+    <Content Include="MyData\HomePage\images\fbtn1.png" />
+    <Content Include="MyData\HomePage\images\fbtn2.png" />
+    <Content Include="MyData\HomePage\images\fbtn3.png" />
+    <Content Include="MyData\HomePage\images\fbtn4.png" />
+    <Content Include="MyData\HomePage\images\fbtn5.png" />
+    <Content Include="MyData\HomePage\images\fbtn6.png" />
+    <Content Include="MyData\HomePage\images\fbtn7.png" />
+    <Content Include="MyData\HomePage\images\fbtn8.png" />
+    <Content Include="MyData\HomePage\images\fd01.jpg" />
+    <Content Include="MyData\HomePage\images\fd02.jpg" />
+    <Content Include="MyData\HomePage\images\fd03.jpg" />
+    <Content Include="MyData\HomePage\images\fd04.jpg" />
+    <Content Include="MyData\HomePage\images\fd05.jpg" />
+    <Content Include="MyData\HomePage\images\ff_01.jpg" />
+    <Content Include="MyData\HomePage\images\fgicon1.png" />
+    <Content Include="MyData\HomePage\images\fgpic1.png" />
+    <Content Include="MyData\HomePage\images\fgpic2.png" />
+    <Content Include="MyData\HomePage\images\fgpic3.png" />
+    <Content Include="MyData\HomePage\images\fgrpic1.png" />
+    <Content Include="MyData\HomePage\images\ficon1.png" />
+    <Content Include="MyData\HomePage\images\ficon2.png" />
+    <Content Include="MyData\HomePage\images\ficon3.png" />
+    <Content Include="MyData\HomePage\images\ficon4.png" />
+    <Content Include="MyData\HomePage\images\ficon5.png" />
+    <Content Include="MyData\HomePage\images\fj.jpg" />
+    <Content Include="MyData\HomePage\images\fj_bz.jpg" />
+    <Content Include="MyData\HomePage\images\flibg1.png" />
+    <Content Include="MyData\HomePage\images\flibg2.png" />
+    <Content Include="MyData\HomePage\images\fmbt1.png" />
+    <Content Include="MyData\HomePage\images\forbg1.png" />
+    <Content Include="MyData\HomePage\images\forpic1.png" />
+    <Content Include="MyData\HomePage\images\ftgbg1.png" />
+    <Content Include="MyData\HomePage\images\ftgbg2.png" />
+    <Content Include="MyData\HomePage\images\ftgbtn1.png" />
+    <Content Include="MyData\HomePage\images\ftgicon1.png" />
+    <Content Include="MyData\HomePage\images\ftgicon2.png" />
+    <Content Include="MyData\HomePage\images\ftgicon3.png" />
+    <Content Include="MyData\HomePage\images\ftgicon4.png" />
+    <Content Include="MyData\HomePage\images\ftgicon5.png" />
+    <Content Include="MyData\HomePage\images\ftgicon6.png" />
+    <Content Include="MyData\HomePage\images\ftgicon7.png" />
+    <Content Include="MyData\HomePage\images\ftgicon8.png" />
+    <Content Include="MyData\HomePage\images\ftgicon9.png" />
+    <Content Include="MyData\HomePage\images\ftgpic1.png" />
+    <Content Include="MyData\HomePage\images\ftgpic2.png" />
+    <Content Include="MyData\HomePage\images\ftgpic3.png" />
+    <Content Include="MyData\HomePage\images\ftgpic4.png" />
+    <Content Include="MyData\HomePage\images\ftx.png" />
+    <Content Include="MyData\HomePage\images\fw_01.jpg" />
+    <Content Include="MyData\HomePage\images\fxcbtn1.png" />
+    <Content Include="MyData\HomePage\images\fxcbtn2.png" />
+    <Content Include="MyData\HomePage\images\fy_row.jpg" />
+    <Content Include="MyData\HomePage\images\fzbpic1.png" />
+    <Content Include="MyData\HomePage\images\g_button.jpg" />
+    <Content Include="MyData\HomePage\images\home_icon.jpg" />
+    <Content Include="MyData\HomePage\images\hui.jpg" />
+    <Content Include="MyData\HomePage\images\hz_icon.jpg" />
+    <Content Include="MyData\HomePage\images\jd_img01.jpg" />
+    <Content Include="MyData\HomePage\images\jd_img02.jpg" />
+    <Content Include="MyData\HomePage\images\jd_img03.jpg" />
+    <Content Include="MyData\HomePage\images\jd_img04.jpg" />
+    <Content Include="MyData\HomePage\images\ji.jpg" />
+    <Content Include="MyData\HomePage\images\jj_icon.jpg" />
+    <Content Include="MyData\HomePage\images\jl.jpg" />
+    <Content Include="MyData\HomePage\images\kj_zf.jpg" />
+    <Content Include="MyData\HomePage\images\lb.jpg" />
+    <Content Include="MyData\HomePage\images\lc_icon.jpg" />
+    <Content Include="MyData\HomePage\images\login_b.png" />
+    <Content Include="MyData\HomePage\images\login_t.jpg" />
+    <Content Include="MyData\HomePage\images\login_t.png" />
+    <Content Include="MyData\HomePage\images\logo.jpg" />
+    <Content Include="MyData\HomePage\images\ls_b.jpg" />
+    <Content Include="MyData\HomePage\images\l_img01.jpg" />
+    <Content Include="MyData\HomePage\images\l_img02.jpg" />
+    <Content Include="MyData\HomePage\images\l_img03.jpg" />
+    <Content Include="MyData\HomePage\images\l_img04.jpg" />
+    <Content Include="MyData\HomePage\images\mf_ah.jpg" />
+    <Content Include="MyData\HomePage\images\more%29%29.jpg" />
+    <Content Include="MyData\HomePage\images\mp_button.jpg" />
+    <Content Include="MyData\HomePage\images\nav_bg.jpg" />
+    <Content Include="MyData\HomePage\images\nav_bl.png" />
+    <Content Include="MyData\HomePage\images\nav_line.jpg" />
+    <Content Include="MyData\HomePage\images\next.jpg" />
+    <Content Include="MyData\HomePage\images\n_row.jpg" />
+    <Content Include="MyData\HomePage\images\order_b.jpg" />
+    <Content Include="MyData\HomePage\images\order_button.jpg" />
+    <Content Include="MyData\HomePage\images\o_brow.jpg" />
+    <Content Include="MyData\HomePage\images\o_row.jpg" />
+    <Content Include="MyData\HomePage\images\pj_img.jpg" />
+    <Content Include="MyData\HomePage\images\pl.jpg" />
+    <Content Include="MyData\HomePage\images\pl_img01.jpg" />
+    <Content Include="MyData\HomePage\images\pl_img02-14.jpg" />
+    <Content Include="MyData\HomePage\images\pl_img02-15.jpg" />
+    <Content Include="MyData\HomePage\images\pl_img02.jpg" />
+    <Content Include="MyData\HomePage\images\pl_img03.jpg" />
+    <Content Include="MyData\HomePage\images\pl_img04.jpg" />
+    <Content Include="MyData\HomePage\images\p_tar01.jpg" />
+    <Content Include="MyData\HomePage\images\p_tar02.jpg" />
+    <Content Include="MyData\HomePage\images\p_tar03.jpg" />
+    <Content Include="MyData\HomePage\images\p_tar04.jpg" />
+    <Content Include="MyData\HomePage\images\p_tar05.jpg" />
+    <Content Include="MyData\HomePage\images\qd_button.jpg" />
+    <Content Include="MyData\HomePage\images\qi.jpg" />
+    <Content Include="MyData\HomePage\images\QQ.jpg" />
+    <Content Include="MyData\HomePage\images\qxgg.jpg" />
+    <Content Include="MyData\HomePage\images\right.jpg" />
+    <Content Include="MyData\HomePage\images\rl.jpg" />
+    <Content Include="MyData\HomePage\images\row.jpg" />
+    <Content Include="MyData\HomePage\images\rx.jpg" />
+    <Content Include="MyData\HomePage\images\s01.jpg" />
+    <Content Include="MyData\HomePage\images\s02.jpg" />
+    <Content Include="MyData\HomePage\images\s03.jpg" />
+    <Content Include="MyData\HomePage\images\s04.jpg" />
+    <Content Include="MyData\HomePage\images\s05.jpg" />
+    <Content Include="MyData\HomePage\images\s06.jpg" />
+    <Content Include="MyData\HomePage\images\search_bu.jpg" />
+    <Content Include="MyData\HomePage\images\sh01.jpg" />
+    <Content Include="MyData\HomePage\images\sh02.jpg" />
+    <Content Include="MyData\HomePage\images\sh03.jpg" />
+    <Content Include="MyData\HomePage\images\sh04.jpg" />
+    <Content Include="MyData\HomePage\images\sh05.jpg" />
+    <Content Include="MyData\HomePage\images\share.jpg" />
+    <Content Include="MyData\HomePage\images\shop_button.jpg" />
+    <Content Include="MyData\HomePage\images\sp_back.jpg" />
+    <Content Include="MyData\HomePage\images\sp_it.jpg" />
+    <Content Include="MyData\HomePage\images\sp_lc.jpg" />
+    <Content Include="MyData\HomePage\images\sp_lc02.jpg" />
+    <Content Include="MyData\HomePage\images\sp_lc03.jpg" />
+    <Content Include="MyData\HomePage\images\sp_lc04.jpg" />
+    <Content Include="MyData\HomePage\images\sp_lc05.jpg" />
+    <Content Include="MyData\HomePage\images\sp_line.jpg" />
+    <Content Include="MyData\HomePage\images\sp_t.jpg" />
+    <Content Include="MyData\HomePage\images\sp_zt.jpg" />
+    <Content Include="MyData\HomePage\images\star01.jpg" />
+    <Content Include="MyData\HomePage\images\sx.jpg" />
+    <Content Include="MyData\HomePage\images\tab_lm.jpg" />
+    <Content Include="MyData\HomePage\images\tc01.jpg" />
+    <Content Include="MyData\HomePage\images\tc02.jpg" />
+    <Content Include="MyData\HomePage\images\tc03.jpg" />
+    <Content Include="MyData\HomePage\images\tc04.jpg" />
+    <Content Include="MyData\HomePage\images\tc05.jpg" />
+    <Content Include="MyData\HomePage\images\tc06.jpg" />
+    <Content Include="MyData\HomePage\images\tc07.jpg" />
+    <Content Include="MyData\HomePage\images\tc08.jpg" />
+    <Content Include="MyData\HomePage\images\tjbd.jpg" />
+    <Content Include="MyData\HomePage\images\tjdd.jpg" />
+    <Content Include="MyData\HomePage\images\tjpj.jpg" />
+    <Content Include="MyData\HomePage\images\tj_order.jpg" />
+    <Content Include="MyData\HomePage\images\top_h.jpg" />
+    <Content Include="MyData\HomePage\images\tw.jpg" />
+    <Content Include="MyData\HomePage\images\t_line.jpg" />
+    <Content Include="MyData\HomePage\images\t_row.jpg" />
+    <Content Include="MyData\HomePage\images\t_row01.jpg" />
+    <Content Include="MyData\HomePage\images\t_row02.jpg" />
+    <Content Include="MyData\HomePage\images\wb.jpg" />
+    <Content Include="MyData\HomePage\images\xq01.jpg" />
+    <Content Include="MyData\HomePage\images\xq02.jpg" />
+    <Content Include="MyData\HomePage\images\xq03.jpg" />
+    <Content Include="MyData\HomePage\images\xx_01.jpg" />
+    <Content Include="MyData\HomePage\images\yzm.jpg" />
+    <Content Include="MyData\HomePage\images\yzm_zc.jpg" />
+    <Content Include="MyData\HomePage\images\zb_img01.jpg" />
+    <Content Include="MyData\HomePage\images\zb_img02.jpg" />
+    <Content Include="MyData\HomePage\images\zb_img03.jpg" />
+    <Content Include="MyData\HomePage\images\zb_img04.jpg" />
+    <Content Include="MyData\HomePage\images\zb_img05.jpg" />
+    <Content Include="MyData\HomePage\images\zb_img06.jpg" />
+    <Content Include="MyData\HomePage\images\zb_img07.jpg" />
+    <Content Include="MyData\HomePage\images\zb_img08.jpg" />
+    <Content Include="MyData\HomePage\images\zc_img0.jpg" />
+    <Content Include="MyData\HomePage\images\zfb.jpg" />
+    <Content Include="MyData\HomePage\images\zx_icon.jpg" />
+    <Content Include="MyData\HomePage\images\z_bg.jpg" />
+    <Content Include="MyData\HomePage\images\z_row.jpg" />
+    <Content Include="MyData\HomePage\js\imgtoggle.js" />
+    <Content Include="MyData\HomePage\js\jquery-1.9.1.min.js" />
+    <Content Include="MyData\HomePage\js\jquery-latest.js" />
+    <Content Include="MyData\images\1.jpg" />
+    <Content Include="MyData\images\10.jpg" />
+    <Content Include="MyData\images\11.jpg" />
+    <Content Include="MyData\images\12.jpg" />
+    <Content Include="MyData\images\13.jpg" />
+    <Content Include="MyData\images\2.jpg" />
+    <Content Include="MyData\images\3.jpg" />
+    <Content Include="MyData\images\4.jpg" />
+    <Content Include="MyData\images\5.jpg" />
+    <Content Include="MyData\images\6.jpg" />
+    <Content Include="MyData\images\7.jpg" />
+    <Content Include="MyData\images\8.jpg" />
+    <Content Include="MyData\images\9.jpg" />
+    <Content Include="MyData\images\banner01.jpg" />
+    <Content Include="MyData\images\banner02.jpg" />
+    <Content Include="MyData\images\banner03.jpg" />
+    <Content Include="MyData\images\banner04.jpg" />
+    <Content Include="MyData\images\banner05.jpg" />
+    <Content Include="MyData\images\banner06.jpg" />
+    <Content Include="MyData\images\banner07.jpg" />
+    <Content Include="MyData\images\banner08.jpg" />
+    <Content Include="MyData\images\banner_r01.png" />
+    <Content Include="MyData\images\banner_r02.png" />
+    <Content Include="MyData\images\menu.png" />
+    <Content Include="MyData\js\jquery-1.11.0.js" />
+    <Content Include="MyData\js\jquery.SuperSlide.2.1.3.js" />
+    <Content Include="MyData\layer\layer.js" />
+    <Content Include="MyData\layer\mobile\layer.js" />
+    <Content Include="MyData\layer\mobile\need\layer.css" />
+    <Content Include="MyData\layer\theme\default\icon-ext.png" />
+    <Content Include="MyData\layer\theme\default\icon.png" />
+    <Content Include="MyData\layer\theme\default\layer.css" />
+    <Content Include="MyData\layer\theme\default\loading-0.gif" />
+    <Content Include="MyData\layer\theme\default\loading-1.gif" />
+    <Content Include="MyData\layer\theme\default\loading-2.gif" />
+    <Content Include="MyData\My97DatePicker\calendar.js" />
+    <Content Include="MyData\My97DatePicker\config.js" />
+    <Content Include="MyData\My97DatePicker\lang\en.js" />
+    <Content Include="MyData\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="MyData\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="MyData\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="MyData\My97DatePicker\skin\blueFresh\datepicker.css" />
+    <Content Include="MyData\My97DatePicker\skin\blueFresh\img.gif" />
+    <Content Include="MyData\My97DatePicker\skin\BuMen.gif" />
+    <Content Include="MyData\My97DatePicker\skin\crm.GIF" />
+    <Content Include="MyData\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="MyData\My97DatePicker\skin\default1\datepicker.css" />
+    <Content Include="MyData\My97DatePicker\skin\default1\img.gif" />
+    <Content Include="MyData\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="MyData\My97DatePicker\skin\default\img.gif" />
+    <Content Include="MyData\My97DatePicker\skin\salary.gif" />
+    <Content Include="MyData\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="MyData\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="MyData\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="MyData\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="MyData\My97DatePicker\WdatePicker.js" />
+    <Content Include="MyData\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="MyData\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="MyData\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="MyData\My97DatePicker\开发包\readme.txt" />
+    <Content Include="MyData\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="MyData\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="MyData\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="MyData\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="MyData\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="MyData\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="MyData\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="MyData\My97DatePicker\lang\vssver2.scc" />
+    <Content Include="MyData\My97DatePicker\skin\default1\vssver2.scc" />
+    <Content Include="MyData\My97DatePicker\skin\vssver2.scc" />
+    <Content Include="MyData\My97DatePicker\skin\whyGreen\vssver2.scc" />
+    <Content Include="MyData\My97DatePicker\vssver2.scc" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Index\Platform.cshtml" />
+    <Content Include="Views\Index\Homepage.cshtml" />
+    <Content Include="Views\Index\Abc.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51844</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
